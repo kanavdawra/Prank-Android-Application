@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:contentInsetStart="0dp">
+        <RelativeLayout
+            android:id="@+id/Task_ToolBar"
+            android:layout_width="match_parent"
+            android:background="@color/Blue"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Task_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"/>
+            <ImageView
+                android:id="@+id/Task_Refresh"
+                android:layout_width="50dp"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_refresh"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/AllSongSelecter"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:id="@+id/AllSongSelecterConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/AllSongSelecter"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="80dp"
+        android:text="Download" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/PlayAbleSongSelecter"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/AllSongSelecterConfirmation"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/PlayAbleSongSelecterConfirmation"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/PlayAbleSongSelecter"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/SeekTo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="0"
+        android:layout_below="@id/PlayAbleSongSelecter"
+        android:layout_toEndOf="@id/PlayAbleSongSelecterConfirmation"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/Play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/AllSongSelecterConfirmation"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/Pause_Play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PlayAbleSongSelecterConfirmation"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Play/Pause" />
+
+    <Button
+        android:id="@+id/Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Pause_Play"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/Restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Stop"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Restart" />
+
+    <EditText
+        android:id="@+id/VolumeText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/Restart"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/SetVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/Restart"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Set Volume" />
+
+
+</RelativeLayout>
