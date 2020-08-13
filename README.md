@@ -3,8 +3,8 @@ Application can play any track on victims phone using the remote control app
 
 Process
 
-1. Install the application to victioms phone and after the installation open it and enter the name of the victim to identify in the remote controll application
-2. Use the application to play the track (use the sync button to wake the app using notification)
+1. Install the application to victims phone and after the installation open it and enter the name of the victim to identify in the remote controll application
+2. Use the application to play the track (use the sync button to wake up the app using notification)
 
 Features
 - Upload track using the app
